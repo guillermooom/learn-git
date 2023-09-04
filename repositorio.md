@@ -16,6 +16,7 @@ Para enterder como funciona la metodoliga de git y como se ve en el terminal hem
 - *SERVER*
 
 Cuando creamos un archivo o modifiquemos en local estos cambios no se reflejan en el server, pero tampoco en la etapa de stage.
+Todos lo cambios realizados en local se verán en stage en **rojo** y cuando esten en stage ya cambiara su color a **verde**.
 Para ello debe pasar de local a stage, lugo a commit y despues a server.
 Todo esto sin saltarse fases, no podemos pasar de *LOCAL* a *COMMIT* ya que no se nos permitirá
 
@@ -28,3 +29,17 @@ Dentro del repositorio iniciado se creará el archivo `.git` la cual será ignor
 
 - `git status` ver el estado actual de nuestro repositorio incluye la rama e indica ficheros en stage y los que no estan allí. Los **untracked files**
     - `git status -s` muestra resumida la informacino de git status
+
+### Stage
+Esta es la etapa entre el commit y local, todos los cambios realizados en local ha de pasar a esta fase para depues ser commiteados y ser subidos mas tarde al server.
+
+- `git add archivo.txt` añade los cambios realizados en local a stage
+    - `git add *.md` añade todos los arhcivos terminados en *.md*
+
+>**NOTA**: Si cuando un archivo esta en stage en verde y realizamos un cambio en local este cambiara su color otra vez a rojo.
+
+### Commit
+Esta estapa es la que guarda los cambios que realizamos, aqui se lleva un registro de los cambios que se realizan y se guardan. Cuando commiteamos todos los archivos de stage se quitaran de alli y pasaran a formar parte de los cambios permanentes.
+- `git commit -m "Primer commit"` se realiza el commit con los archivos que estavben en stage
+#### Poer forma de hacer commits
+- `git commit` te abre en el editor de texter que tengamos configurado un archivo (arriba de este irá el texto sin nada) luego guardamos y cerramos, al cerrarlo se realizará el commit automaticamente.
