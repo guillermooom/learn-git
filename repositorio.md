@@ -27,8 +27,15 @@ Dentro del repositorio iniciado se creará el archivo `.git` la cual será ignor
 
 - `code .` abre la carpeta en nuestro editor de texto (VS Code que es el que tenemos configurado)
 
+### Estado de los archivos
+
 - `git status` ver el estado actual de nuestro repositorio incluye la rama e indica ficheros en stage y los que no estan allí. Los **untracked files**
     - `git status -s` muestra resumida la informacino de git status
+    > *M* (Rojo) archivo modificado en mi pc
+    > *M* (Verde) archivo modificado estado en etapa de stage
+    > *??* No ha sido agregadoi al stage (archivo nuevo)
+    > *A* (Verde) archivo que estamos agregando (archivo nuevo)
+    
 
 ### Stage
 Esta es la etapa entre el commit y local, todos los cambios realizados en local ha de pasar a esta fase para depues ser commiteados y ser subidos mas tarde al server.
@@ -41,5 +48,9 @@ Esta es la etapa entre el commit y local, todos los cambios realizados en local 
 ### Commit
 Esta estapa es la que guarda los cambios que realizamos, aqui se lleva un registro de los cambios que se realizan y se guardan. Cuando commiteamos todos los archivos de stage se quitaran de alli y pasaran a formar parte de los cambios permanentes.
 - `git commit -m "Primer commit"` se realiza el commit con los archivos que estavben en stage
-#### Poer forma de hacer commits
+#### Peor forma de hacer commits
 - `git commit` te abre en el editor de texter que tengamos configurado un archivo (arriba de este irá el texto sin nada) luego guardamos y cerramos, al cerrarlo se realizará el commit automaticamente.
+
+### Server
+Para añadir archivos al server partimos de la base que tenemos configurado ant5es nuestra carpeta local con un repositorio de github, cuando lo tengamos vamos a subir archivos con el siguinte comando;
+- `git push` se subiran los commits al server
